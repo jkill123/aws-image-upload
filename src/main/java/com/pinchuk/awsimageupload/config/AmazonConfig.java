@@ -3,6 +3,7 @@ package com.pinchuk.awsimageupload.config;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import org.springframework.context.annotation.Bean;
@@ -18,14 +19,15 @@ public class AmazonConfig {
     @Bean
     public AmazonS3 s3() {
         AWSCredentials awsCredentials = new BasicAWSCredentials(
-                "AKIAJGLB6ZAFHSUTFSRQ",
-                "45v4CHmFQSD9wSF6mBX2arJT/+s49vBRL6WoxbNj"
+                "AKIAIGWII2K3ZUA3D4NA",
+                "H4+ngflJ09WbE6s1T5yWaO5nd08VM5tEl6dozlzW"
         );
 
         return AmazonS3ClientBuilder
                 .standard()
-                .withRegion("us-east-1")
+                .withRegion(Regions.US_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
+
     }
 }

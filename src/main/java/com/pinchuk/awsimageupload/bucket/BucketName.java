@@ -11,7 +11,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum BucketName {
 
-    PROFILE_IMAGE("pinchuk-image-upload");
+    PROFILE_IMAGE("pinchuk-image-upload2");
     private final String bucketName;
 
 }
